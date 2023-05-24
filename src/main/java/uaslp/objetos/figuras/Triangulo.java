@@ -1,15 +1,24 @@
 package uaslp.objetos.figuras;
 
-public class Triangulo {
+import java.security.PublicKey;
+
+public class Triangulo implements DrawableItem, Figura{
     private double base;
     private double altura;
     private double area;
-    public Triangulo(double altura, double base){
+    private String description = "Cualquier triangulo";
+    public Triangulo(double base, double altura){
         this.altura = altura;
         this.base = base;
     }
     public Triangulo(){
 
+    }
+    public Triangulo(String description){
+        this.description = description;
+    }
+    public String getDescription(){
+        return description;
     }
     public void setBase(double base){
         this.base = base;
@@ -28,5 +37,8 @@ public class Triangulo {
 
     public double getBase() {
         return base;
+    }
+    public String getName(){
+        return "Triangulo";
     }
 }

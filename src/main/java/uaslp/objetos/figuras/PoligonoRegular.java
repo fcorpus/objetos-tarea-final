@@ -1,6 +1,6 @@
 package uaslp.objetos.figuras;
 
-public class PoligonoRegular {
+public class PoligonoRegular implements  DrawableItem, Figura{
     private int numeroDeLados;
     private double lado;
     private double area;
@@ -25,5 +25,8 @@ public class PoligonoRegular {
     }
     public double getLado(){
         return lado;
+    }
+    public String getName(){
+        return "Poligono Regular";
     }
 }
