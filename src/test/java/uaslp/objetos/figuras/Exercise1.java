@@ -2,6 +2,11 @@ package uaslp.objetos.figuras;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import uaslp.objetos.figuras.exceptions.AlturaNoProvistaException;
+import uaslp.objetos.figuras.exceptions.BaseNoProvistaException;
+import uaslp.objetos.figuras.exceptions.LadoNoProvistoException;
+import uaslp.objetos.figuras.exceptions.NumeroInvalidoDeLados;
+
 
 public class Exercise1 {
 
@@ -12,7 +17,7 @@ public class Exercise1 {
     // NO DEBES MODIFICAR PARA NADA ESTA CLASE
 
     @Test
-    public void testCuadrado(){
+    public void testCuadrado() throws LadoNoProvistoException {
         // Given:
         Cuadrado cuadrado = new Cuadrado();
         double lado = 10;
@@ -27,7 +32,7 @@ public class Exercise1 {
     }
 
     @Test
-    public void testConstructorCuadrado(){
+    public void testConstructorCuadrado() throws LadoNoProvistoException {
         // Given:
         double lado = 10;
         Cuadrado cuadrado = new Cuadrado(lado);
@@ -41,7 +46,7 @@ public class Exercise1 {
     }
 
     @Test
-    public void testTriangulo(){
+    public void testTriangulo() throws BaseNoProvistaException, AlturaNoProvistaException {
         // Given:
         Triangulo triangulo = new Triangulo();
         double base = 10;
@@ -58,7 +63,7 @@ public class Exercise1 {
     }
 
     @Test
-    public void testConstructorTriangulo(){
+    public void testConstructorTriangulo() throws BaseNoProvistaException, AlturaNoProvistaException {
         // Given:
         double base = 10;
         double altura = 3;
